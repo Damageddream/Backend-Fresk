@@ -146,14 +146,11 @@ STATIC_ROOT = '/vol/web/static'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
-     'http://localhost:3000'
+     'http://localhost:3000',
+     'https://fresk-fundacja.pl/',
+     'https://fresk-fundacja.pl'
 ]
-CORS_ORIGIN_WHITELIST.extend(
-    filter(
-        None,
-        os.environ.get('ALLOWED_HOSTS','').split(','),
-    )
-)
+
 
 AUTH_USER_MODEL = 'freskbackend.User'
 
